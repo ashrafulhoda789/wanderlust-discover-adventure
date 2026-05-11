@@ -1,5 +1,7 @@
+import { EditModal } from '@/components/EditModal';
 import { Button, Input } from '@heroui/react';
 import Image from 'next/image';
+import { BiEdit } from 'react-icons/bi';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { FaRegCalendarAlt, FaStar } from 'react-icons/fa';
 import { LuMapPin } from 'react-icons/lu';
@@ -26,9 +28,9 @@ const DestinationDetailPage = async ({ params }) => {
         <div className="min-h-screen bg-[#f5f7fa] py-10 px-4">
 
             <div className="max-w-7xl mx-auto">
-
+                <EditModal destination={destination}/>
                 {/* Main Card */}
-                <div className="bg-white rounded-[30px] overflow-hidden shadow-xl border border-gray-100">
+                <div className="bg-white rounded-lg overflow-hidden shadow-xl border border-gray-100">
 
                     {/* Banner Image */}
                     <div className="relative w-full h-62.5 md:h-125 overflow-hidden">
