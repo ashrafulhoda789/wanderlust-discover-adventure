@@ -27,11 +27,11 @@ const DestinationCard = ({ destination }) => {
                     alt={destinationName}
                     width={500}
                     height={500}
-                    className="w-full h-[260px] object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-65 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent"></div>
 
                 {/* Price Badge */}
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-md">
@@ -61,11 +61,11 @@ const DestinationCard = ({ destination }) => {
                 {/* Title */}
                 <div className="flex justify-between items-center">
 
-                    <h2 className="text-2xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">
+                    <h2 className="text-xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">
                         {destinationName}
                     </h2>
 
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">${price}</h3>
+                    <h3 className="text-md font-semibold text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">${price}</h3>
                 </div>
 
                 {/* Duration */}
