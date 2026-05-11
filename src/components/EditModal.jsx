@@ -335,7 +335,7 @@ export function EditModal({ destination }) {
 
                                                     <TextArea
                                                         placeholder="Describe the travel experience..."
-                                                        className="w-full rounded-3xl px-5 pt-4 border-2 border-gray-200 bg-white shadow-sm min-h-[160px]"
+                                                        className="w-full rounded-3xl px-5 pt-4 border-2 border-gray-200 bg-white shadow-sm min-h-40"
                                                     />
 
                                                 </div>

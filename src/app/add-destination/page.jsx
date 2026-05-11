@@ -347,7 +347,7 @@ const AddDestinationPage = () => {
 
                             <Button
                                 type="submit"
-                                className="w-full h-14 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg font-semibold shadow-lg hover:scale-[1.02] transition-all duration-300"
+                                className="w-full h-14 rounded-2xl bg-linear-to-r from-cyan-500 to-blue-600 text-white text-lg font-semibold shadow-lg hover:scale-[1.02] transition-all duration-300"
                             >
                                 Add Travel Package
                             </Button>
