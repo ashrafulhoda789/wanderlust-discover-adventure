@@ -11,6 +11,7 @@ import {
     TextArea,
     Button
 } from '@heroui/react';
+import { redirect } from 'next/navigation';
 
 import {
     FaMapMarkedAlt,
@@ -42,6 +43,9 @@ const AddDestinationPage = () => {
         })
 
         const data = await res.json()
+        if(data.insertedId){
+            redirect('destinations')
+        }
         // console.log(data);
     }
 

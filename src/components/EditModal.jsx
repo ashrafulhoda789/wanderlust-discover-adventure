@@ -40,7 +40,7 @@ export function EditModal({ destination }) {
             body: JSON.stringify(destination)
         })
 
-        
+
         const data = await res.json()
         console.log(data);
         closeRef.current?.click();
@@ -48,9 +48,9 @@ export function EditModal({ destination }) {
 
     return (
         <Modal>
-            <div className='flex justify-end'>
-                <Button variant='outline' className={'flex items-center rounded-lg my-5'}><BiEdit /> Edit</Button>
-            </div>
+
+            <Button variant='outline' className={'flex items-center rounded-lg my-5'}><BiEdit /> Edit</Button>
+
             <Modal.Backdrop>
                 <Modal.Container placement="auto">
                     <Modal.Dialog className="sm:max-w-5xl rounded-[32px] overflow-hidden border border-white/20 shadow-2xl bg-white">
