@@ -1,3 +1,4 @@
+import BookingCard from '@/components/BookingCard';
 import { DeleteDialog } from '@/components/DeleteDialog';
 import { EditModal } from '@/components/EditModal';
 import { Button, Input } from '@heroui/react';
@@ -20,7 +21,6 @@ const DestinationDetailPage = async ({ params }) => {
         country,
         destinationName,
         duration,
-        price,
         description,
         departureDate
     } = destination;
@@ -31,7 +31,7 @@ const DestinationDetailPage = async ({ params }) => {
             <div className="max-w-7xl mx-auto">
                 <div className='flex justify-end gap-3'>
                     <EditModal destination={destination} />
-                    <DeleteDialog destination={destination}/>
+                    <DeleteDialog destination={destination} />
                 </div>
 
                 {/* Main Card */}
@@ -163,64 +163,7 @@ const DestinationDetailPage = async ({ params }) => {
                         {/* Right Booking Card */}
                         <div>
 
-                            <div className="sticky top-10 bg-white border border-gray-200 rounded-[28px] shadow-lg p-6">
-
-                                {/* Price */}
-                                <div>
-
-                                    <p className="text-gray-400 text-sm mb-2">
-                                        Starting from
-                                    </p>
-
-                                    <h2 className="text-5xl font-black text-cyan-600">
-                                        ${price}
-                                    </h2>
-
-                                    <p className="text-gray-500 mt-2">
-                                        per person
-                                    </p>
-
-                                </div>
-
-                                {/* Divider */}
-                                <div className="w-full h-px bg-gray-200 my-6"></div>
-
-                                {/* Booking Form */}
-                                <div className="space-y-5">
-
-                                    <div className='px-4 py-2 text-gray-600 bg-gray-100 rounded-xl'>
-                                        {departureDate}
-                                    </div>
-
-                                    <Button
-                                        className="w-full h-12 rounded-2xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold text-lg shadow-lg hover:scale-[1.02] transition-all duration-300 flex items-center gap-2"
-                                    >
-                                        Book Now <BsArrowUpRight></BsArrowUpRight>
-                                    </Button>
-
-                                </div>
-
-                                {/* Features */}
-                                <div className="mt-8 space-y-4">
-
-                                    <div className="flex items-center gap-3 text-gray-600">
-                                        <div className="w-2 h-2 rounded-full bg-cyan-500"></div>
-                                        Free cancellation
-                                    </div>
-
-                                    <div className="flex items-center gap-3 text-gray-600">
-                                        <div className="w-2 h-2 rounded-full bg-cyan-500"></div>
-                                        Instant confirmation
-                                    </div>
-
-                                    <div className="flex items-center gap-3 text-gray-600">
-                                        <div className="w-2 h-2 rounded-full bg-cyan-500"></div>
-                                        Secure payment
-                                    </div>
-
-                                </div>
-
-                            </div>
+                            <BookingCard destination={destination} />
 
                         </div>
 
