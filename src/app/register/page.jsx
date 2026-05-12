@@ -28,7 +28,7 @@ export default function SignUpPage() {
 
         console.log(user);
 
-        const {data, error} = await authClient.signUp.email({
+        const { data, error } = await authClient.signUp.email({
             name: user.name,
             image: user.image,
             email: user.email,
@@ -36,15 +36,20 @@ export default function SignUpPage() {
         })
 
         // console.log(data, error);
-        if(error){
+        if (error) {
             toast.error(`${error.message}`)
         }
-        else{
+        else {
             toast.success('Registration Successfully Completed!')
             router.push('/login')
         }
     };
 
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
 
     return (
@@ -225,11 +230,9 @@ export default function SignUpPage() {
 
                 {/* Google Button */}
                 <Button
+                    onClick={handleGoogleSignIn}
                     variant="bordered"
-                    className="w-full border border-gray-200 
-            hover:border-blue-400 hover:bg-blue-50
-            text-gray-700 font-semibold py-7 rounded-2xl 
-            transition-all duration-300 shadow-sm"
+                    className="w-full border border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-gray-700 font-semibold py-7 rounded-2xl transition-all duration-300 shadow-sm"
                 >
                     <FaGoogle className="text-red-500 text-xl" />
 

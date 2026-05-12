@@ -39,7 +39,11 @@ export default function LoginPage() {
 
     };
 
-
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-white to-cyan-100 px-4 py-10 overflow-hidden relative">
@@ -95,7 +99,7 @@ export default function LoginPage() {
 
                         <Input
                             placeholder="john@example.com"
-                       
+
                             className={'w-full h-14 rounded-2xl border border-gray-200 bg-white/70 backdrop-blur-md hover:border-blue-400 focus-within:border-blue-500 transition'}
                         />
 
@@ -142,7 +146,7 @@ export default function LoginPage() {
 
                         <Input
                             placeholder="Enter your password"
-                            
+
                             className={'w-full h-14 rounded-2xl border border-gray-200 bg-white/70 backdrop-blur-md hover:border-blue-400 focus-within:border-blue-500 transition'}
                         />
 
@@ -189,11 +193,9 @@ export default function LoginPage() {
 
                 {/* Google Login */}
                 <Button
+                    onClick={handleGoogleSignIn}
                     variant="bordered"
-                    className="w-full border border-gray-200 
-            hover:border-blue-400 hover:bg-blue-50
-            text-gray-700 font-semibold py-7 rounded-2xl 
-            transition-all duration-300 shadow-sm"
+                    className="w-full border border-gray-200 hover:border-blue-400 hover:bg-blue-50 text-gray-700 font-semibold py-7 rounded-2xl transition-all duration-300 shadow-sm"
                 >
                     <FaGoogle className="text-red-500 text-xl" />
 

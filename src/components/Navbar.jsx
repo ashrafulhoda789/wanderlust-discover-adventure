@@ -68,7 +68,7 @@ const Navbar = () => {
                     {
                         user ? (
                             <div className='flex gap-2 items-center'>
-                                <Image src={user?.image} alt={user?.name} width={50} height={50} />
+                                <Image src={user?.image || '/assets/userAvatar.webp'} alt={user?.name} width={40} height={40} className='rounded-full' />
                                 <Button onClick={async () => await authClient.signOut()} variant='ghost' className={'text-rose-500'}>LogOut</Button>
                             </div>
                         )
