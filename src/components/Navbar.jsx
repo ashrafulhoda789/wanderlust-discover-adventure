@@ -1,11 +1,19 @@
 "use client"
 
+import { authClient, useSession } from '@/lib/auth-client';
+import { Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const userData = authClient.useSession();
+    const user = userData?.data?.user;
+
+    // console.log(user);
+
     return (
         <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
             <header className="flex h-16 items-center justify-between px-6">
@@ -55,10 +63,23 @@ const Navbar = () => {
                         height={100}
                     />
                 </div>
-                <ul className='flex gap-3'>
+                <ul className='flex gap-4 items-center'>
                     <li><Link href={'/profile'}>Profile</Link></li>
-                    <li><Link href={'/login'}>Login</Link></li>
-                    <li><Link href={'/register'}>Sign Up</Link></li>
+                    {
+                        user ? (
+                            <div className='flex gap-2 items-center'>
+                                <Image src={user?.image} alt={user?.name} width={50} height={50} />
+                                <Button onClick={async () => await authClient.signOut()} variant='ghost' className={'text-rose-500'}>LogOut</Button>
+                            </div>
+                        )
+                            :
+                            (
+                                <div className='flex gap-3 items-center'>
+                                    <li><Link href={'/login'}>Login</Link></li>
+                                    <li><Link href={'/register'}>Sign Up</Link></li>
+                                </div>
+                            )
+                    }
                 </ul>
             </header>
             {isMenuOpen && (
