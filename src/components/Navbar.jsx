@@ -58,7 +58,7 @@ const Navbar = () => {
                 <ul className='flex gap-3'>
                     <li><Link href={'/profile'}>Profile</Link></li>
                     <li><Link href={'/login'}>Login</Link></li>
-                    <li><Link href={'/signup'}>Sign Up</Link></li>
+                    <li><Link href={'/register'}>Sign Up</Link></li>
                 </ul>
             </header>
             {isMenuOpen && (
