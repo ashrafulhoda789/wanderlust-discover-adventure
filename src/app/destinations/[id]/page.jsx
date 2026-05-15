@@ -1,7 +1,9 @@
 import BookingCard from '@/components/BookingCard';
 import { DeleteDialog } from '@/components/DeleteDialog';
 import { EditModal } from '@/components/EditModal';
+import { auth } from '@/lib/auth';
 import { Button, Input } from '@heroui/react';
+import { headers } from 'next/headers';
 import Image from 'next/image';
 import { BiEdit } from 'react-icons/bi';
 import { BsArrowUpRight } from 'react-icons/bs';
@@ -12,7 +14,17 @@ import { LuMapPin } from 'react-icons/lu';
 const DestinationDetailPage = async ({ params }) => {
     const { id } = await params;
 
-    const res = await fetch(`http://localhost:5000/destination/${id}`)
+    const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+
+    // console.log(token);
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/destination/${id}`, {
+        headers: {
+            authorization: `Bearer ${token}`
+        }
+    })
     const destination = await res.json();
 
     // console.log(destination);

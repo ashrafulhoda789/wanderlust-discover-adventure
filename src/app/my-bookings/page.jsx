@@ -12,7 +12,16 @@ const MyBookingPage = async () => {
 
     const user = session?.user;
 
-    const res = await fetch(`http://localhost:5000/booking/${user.id}`)
+    const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/booking/${user.id}`, {
+        headers: {
+            authorization: `Bearer ${token}`
+        }
+    })
 
     const bookings = await res.json();
     // console.log(bookings);
@@ -36,8 +45,8 @@ const MyBookingPage = async () => {
                     <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-xl shadow-sm border border-gray-100 w-fit">
 
                         <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">
-                           
-                            <Image src={user?.image} alt={user?.name?.charAt(0)} width={50} height={50} className='rounded-full'/>
+
+                            <Image src={user?.image} alt={user?.name?.charAt(0)} width={50} height={50} className='rounded-full' />
                         </div>
 
                         <div>
@@ -50,13 +59,38 @@ const MyBookingPage = async () => {
                     </div>
 
                 </div>
-                <div className='grid grid-cols-1 gap-6 '>
-                    {
-                        bookings.map(booking => (
-                            <MyBookingCard key={booking._id} booking={booking} />
-                        ))
-                    }
-                </div>
+                {
+                    bookings.length === 0 ? (
+
+                        <div className="bg-white border border-gray-200 rounded-2xl p-10 text-center shadow-sm">
+
+                            <h3 className="text-2xl font-bold text-gray-800">
+                                You have not booked any place yet.
+                            </h3>
+
+                            <p className="text-gray-500 mt-2">
+                                Start exploring and book your favorite destination.
+                            </p>
+
+                        </div>
+
+                    ) : (
+
+                        <div className='grid grid-cols-1 gap-6'>
+
+                            {
+                                bookings.map(booking => (
+                                    <MyBookingCard
+                                        key={booking._id}
+                                        booking={booking}
+                                    />
+                                ))
+                            }
+
+                        </div>
+
+                    )
+                }
             </div>
 
         </div>
