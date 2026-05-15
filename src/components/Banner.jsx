@@ -1,4 +1,5 @@
 import { Separator } from "@heroui/react";
+import Link from "next/link";
 
 const Banner = () => {
     return (
@@ -17,13 +18,12 @@ const Banner = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto">
-                    <button className="uppercase bg-cyan-500 px-5 py-3 cursor-pointer w-full sm:w-auto">
-                        Explore Now
-                    </button>
+                    <Link href={'/destinations'}>
+                        <button className="uppercase bg-cyan-500 px-5 py-3 cursor-pointer w-full sm:w-auto">
+                            Explore Now
+                        </button>
+                    </Link>
 
-                    <button className="uppercase px-5 py-3 bg-white/50 cursor-pointer w-full sm:w-auto">
-                        View Destination
-                    </button>
                 </div>
             </div>
 

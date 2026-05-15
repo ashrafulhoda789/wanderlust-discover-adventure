@@ -2,6 +2,7 @@ import { Button } from '@heroui/react';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import DestinationCard from './DestinationCard';
+import Link from 'next/link';
 
 const Featured = async () => {
 
@@ -21,7 +22,7 @@ const Featured = async () => {
                         Handpicked travel experiences for the adventure seekers
                     </p>
                 </div>
-                <Button variant='outline' className={'rounded-none border-cyan-500'}>All Destination <FaArrowRight /></Button>
+                <Link href={'/destinations'}><Button variant='outline' className={'rounded-none border-cyan-500'}>All Destination <FaArrowRight /></Button></Link>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-8'>
