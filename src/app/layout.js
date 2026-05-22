@@ -11,7 +11,7 @@ const josefin = Josefin_Sans({
 
 
 export const metadata = {
-  title: "Wonderlust",
+  title: "Wanderlast",
   description: "Wonderlust is a modern travel and destination booking platform where users can explore, add, manage, and discover amazing travel destinations worldwide.",
   keywords: [
     "Wonderlust",
