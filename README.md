@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌍 Wanderlast – Travel & Destination Booking Platform
 
-## Getting Started
+Wanderlast is a modern full-stack travel and destination booking platform where users can explore, add, manage, and discover amazing travel destinations from around the world.
 
-First, run the development server:
+Built with modern web technologies, Wonderlust provides a smooth and responsive user experience with secure authentication and complete destination management functionality.
+
+---
+
+## ✨ Features
+
+### 👤 User Features
+- 🔐 Secure Authentication (Login & Registration)
+- 👤 User Profile Management
+- 🌍 Explore Travel Destinations
+- ➕ Add New Destinations
+- ✏️ Edit Existing Destinations
+- 🗑️ Delete Destinations
+- 📱 Fully Responsive Design
+
+---
+
+### 🌎 Destination Management
+- CRUD Operations for Destinations
+- Upload Destination Images
+- Add Destination Details & Pricing
+- Location-Based Listings
+- Dynamic Destination Pages
+
+---
+
+### 🔒 Authentication & Security
+- JWT / Better Auth Authentication
+- Protected Routes
+- Secure User Session Handling
+- User-Specific Access Control
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js
+- React.js
+- Tailwind CSS
+- Hero UI
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+
+### Authentication
+- Better Auth / JWT
+
+### Tools & Deployment
+- Git & GitHub
+- Vercel
+- REST API
+
+---
+
+## 🌐 Live Demo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[https://wonderlust-travel.vercel.app](https://wonderlust-brown.vercel.app/)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Core Functionalities
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Feature | Description |
+|---|---|
+| Add Destination | Users can create travel destinations |
+| View Destinations | Browse all listed destinations |
+| Update Destination | Edit destination details |
+| Delete Destination | Remove destinations |
+| Authentication | Secure login & registration |
+| User Profile | Personalized profile management |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Developer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Developed by **Ashraful Hoda**
 
-## Deploy on Vercel
+- GitHub: `https://github.com/asrafulhoda789`
+- LinkedIn: `www.linkedin.com/in/ashraful-hoda-jamshed`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
