@@ -47,7 +47,7 @@ export function BookingCancelAlart({booking}) {
                                 Cancel
                             </Button>
                             <Button onClick={handleCancelBooking} slot="close" variant="danger">
-                                Delete Project
+                                Delete
                             </Button>
                         </AlertDialog.Footer>
                     </AlertDialog.Dialog>
