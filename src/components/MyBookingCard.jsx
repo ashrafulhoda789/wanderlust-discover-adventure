@@ -81,7 +81,7 @@ const MyBookingCard = ({ booking }) => {
                     </div>
 
                     {/* Info Cards */}
-                    <div className="grid grid-cols-2 gap-4 mt-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
                         <div
                             className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4"
