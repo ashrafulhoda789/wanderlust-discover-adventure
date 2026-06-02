@@ -63,9 +63,7 @@ Built with modern web technologies, Wonderlust provides a smooth and responsive 
 
 ## 🌐 Live Demo
 
-```bash
-[https://wonderlust-travel.vercel.app](https://wonderlust-brown.vercel.app/)
-```
+# https://wonderlust-brown.vercel.app
 
 ## 🎯 Core Functionalities
 
